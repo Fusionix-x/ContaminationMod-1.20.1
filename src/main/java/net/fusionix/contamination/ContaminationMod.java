@@ -1,6 +1,8 @@
 package net.fusionix.contamination;
 
 import com.mojang.logging.LogUtils;
+import net.fusionix.contamination.block.ModBlocks;
+import net.fusionix.contamination.item.ModCreativeModeTabs;
 import net.fusionix.contamination.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -20,7 +22,7 @@ import org.slf4j.Logger;
 public class ContaminationMod {
 
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "assets/contamination";
+    public static final String MOD_ID = "contamination";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
@@ -29,7 +31,10 @@ public class ContaminationMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);
@@ -45,8 +50,13 @@ public class ContaminationMod {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.URANIUM);
+            event.accept(ModItems.URANIUM_INGOT);
             event.accept(ModItems.RAW_URANIUM);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.URANIUM_BLOCK);
+            event.accept(ModBlocks.URANIUM_ORE);
         }
     }
 

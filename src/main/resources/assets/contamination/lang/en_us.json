@@ -1,4 +1,17 @@
 {
-  "item.contamination.uranium": "Uranium",
-  "item.contamination.raw_uranium": "Raw Uranium"
+  "item.contamination.uranium_ingot": "Uranium Ingot",
+  "item.contamination.raw_uranium": "Raw Uranium",
+  "item.contamination.titanium_ingot": "Titanium Ingot",
+  "item.contamination.raw_titanium": "Raw Titanium",
+  "item.contamination.lead_ingot": "Lead Ingot",
+  "item.contamination.raw_lead": "Raw Lead",
+
+  "block.contamination.uranium_block": "Uranium Block",
+  "block.contamination.uranium_ore": "Uranium Ore",
+  "block.contamination.titanium_block": "Titanium Block",
+  "block.contamination.titanium_ore": "Titanium Ore",
+  "block.contamination.lead_block": "Lead Block",
+  "block.contamination.lead_ore": "Lead Ore",
+
+  "creativetab.contamination_tab": "Contamination Tab"
 }

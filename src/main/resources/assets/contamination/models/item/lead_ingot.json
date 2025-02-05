@@ -1,6 +1,6 @@
 {
   "parent":"item/generated",
   "textures": {
-    "layer0": "contamination:item/uranium"
+    "layer0": "contamination:item/lead_ingot"
   }
 }

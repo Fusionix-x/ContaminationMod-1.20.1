@@ -1,0 +1,11 @@
+{
+  "replace":false,
+  "values": [
+    "contamination:uranium_block",
+    "contamination:uranium_ore",
+    "contamination:titanium_block",
+    "contamination:titanium_ore",
+    "contamination:lead_block",
+    "contamination:lead_ore"
+  ]
+}
